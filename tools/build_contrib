@@ -1,0 +1,225 @@
+#! /usr/bin/python
+
+# builds all contrib projects and installs them to contrib/include and contrib/lib
+
+# this function prints out the help dialogue
+def help():
+	print("usage: build_contrib [-p target_platform] [-l target_library]")
+	print("-h [--help]      display this message.")
+	print("-p [--platform]  specify the build platform")
+	print("                     windows - build 3rd party library for Win32/Win64")
+	print("                     osx     - build 3rd party library for Mac OS X")
+	print("                     ubuntu  - build 3rd party library for Ubuntu")
+	print("-l [--library]   specify the library to be built")
+	print("                     all       - all contrib libraries are built [default]")
+	print("                     assimp    - only Assimp 3.0 is built")
+	print("                     freeimage - only FreeImage 3.16 is built")
+	print("                     freetype  - only FreeType 2.5.3 is built")
+	print("                     libjson   - only LibJSON 7.6.1 is built")
+	print("                     glm       - only GLM 0.9.5.3.7 is built")
+	exit()
+
+import os
+import sys
+
+# define some constants to determine the operating system
+plat_windows = "windows"
+plat_osx     = "osx"
+plat_ubuntu  = "ubuntu"
+platform     = None
+
+# define some constants to determine the 3rd party libraries
+lib_all       = "all"
+lib_assimp    = "assimp"
+lib_freeimage = "freeimage"
+lib_freetype  = "freetype"
+lib_libjson   = "libjson"
+lib_glm       = "glm"
+library       = None
+
+# interpret the command line arguments
+i = 1
+num_args = len(sys.argv)
+while i < num_args:
+	arg = sys.argv[i]
+
+	# display help
+	if arg == "-h" or arg == "--help":
+		help()
+    
+	# set the platform target
+	elif arg == "-p" or arg == "--platform":
+		if i == num_args -1:
+			print("error: missing argument value: " + str(arg))
+			exit()
+		else:
+			i += 1
+			platform = sys.argv[i]
+			if platform != plat_windows and platform != plat_osx and platform != plat_ubuntu:
+				print("error: invalid argument value: " + str(arg) + ": " + str(platform))
+				exit()
+
+	# set the 3rd party library to be built
+	elif arg == "-l" or arg == "--library":
+		if i == num_args -1:
+			print("error: missing argument value: " + str(arg))
+			exit()
+		else:
+			i += 1
+			library = sys.argv[i]
+			if library != lib_all and library != lib_assimp and library != lib_freeimage and library != lib_freetype and library != lib_libjson and library != lib_glm:
+				print("error: invalid argument value: " + str(arg) + ": " + str(library))
+				exit()
+
+	# invalid argument
+	else:
+		print("error: unrecognised argument: " + str(arg))
+		exit()
+
+	i += 1
+
+# if no platform was specified
+if platform == None:
+	print("warning: missing argument: --platform")
+	if sys.platform.startswith("win"):
+		print("default: windows")
+		platform = plat_windows
+	elif sys.platform.startswith("darwin"):
+		print("default: osx")
+		platform = plat_osx
+	elif sys.platform.startswith("linux"):
+		print("default: ubuntu")
+		platform = plat_ubuntu
+	else:
+		print("default: cannot detect")
+		print("abort")
+		exit()
+
+# if no library was specified
+if library == None:
+	print("warning: missing argument: --library")
+	print("default: all")
+	library = lib_all # default to all
+
+# handle the Mac OS X platform
+if platform == plat_osx or platform == plat_ubuntu:
+    
+    # make sure required directories exist
+    os.system("mkdir -p ./contrib/include")
+    os.system("mkdir -p ./contrib/lib")
+    os.system("mkdir -p ./contrib/unzip")
+
+    # building the Assimp library
+    if library == lib_assimp or library == lib_all:
+        
+        # clean
+        os.system("rm -rf ./contrib/include/assimp")
+        os.system("rm -rf ./contrib/lib/libassimp.a")
+        os.system("rm -rf ./contrib/unzip/assimp")
+            
+        # unzip
+        os.system("unzip ./contrib/zip/assimp.zip -d ./contrib/unzip")
+            
+        # make the library
+        os.system("cd ./contrib/unzip/assimp; cmake -DENABLE_BOOST_WORKAROUND=ON -DBUILD_STATIC_LIB=ON -DBUILD_ASSIMP_TOOLS=OFF -G \"Unix Makefiles\" .")
+        os.system("make -C ./contrib/unzip/assimp")
+        
+        # install the library
+        os.system("mkdir -p ./contrib/include/assimp")
+        os.system("cp ./contrib/unzip/assimp/lib/libassimp.a ./contrib/lib/libassimp.a")
+        os.system("cp -R ./contrib/unzip/assimp/include/assimp/* ./contrib/include/assimp")
+
+        # clean
+        os.system("rm -rf ./contrib/unzip/assimp")
+    
+    # building the FreeImage library
+    if library == lib_freeimage or library == lib_all:
+        
+        # clean
+        os.system("rm -rf ./contrib/include/freeimage")
+        os.system("rm -rf ./contrib/lib/libfreeimage.a")
+        os.system("rm -rf ./contrib/unzip/freeimage")
+        
+        # unzip
+        os.system("unzip ./contrib/zip/freeimage.zip -d ./contrib/unzip")
+        
+        # make the library
+        if platform == plat_osx:
+            os.system("make -C ./contrib/unzip/freeimage -f Makefile.osx_gnu clean")
+            os.system("make -C ./contrib/unzip/freeimage -f Makefile.osx_gnu")
+        elif platform == plat_ubuntu:
+            os.system("make -C ./contrib/unzip/freeimage -f Makefile.gnu clean")
+            os.system("make -C ./contrib/unzip/freeimage -f Makefile.gnu")
+        
+        # install the library library
+        os.system("mkdir -p ./contrib/include/freeimage")
+        os.system("cp ./contrib/unzip/freeimage/Dist/libfreeimage.a ./contrib/lib/libfreeimage.a")
+        os.system("cp ./contrib/unzip/freeimage/Dist/FreeImage.h ./contrib/include/freeimage/FreeImage.h")
+        
+        # clean
+        os.system("rm -rf ./contrib/unzip/freeimage")
+    
+    # building the FreeType library
+    if library == lib_freetype or library == lib_all:
+        
+        # clean
+        os.system("rm -rf ./contrib/include/freetype")
+        os.system("rm -rf ./contrib/lib/libfreetype.a")
+        os.system("rm -rf ./contrib/unzip/freetype")
+            
+        # unzip
+        os.system("unzip ./contrib/zip/freetype.zip -d ./contrib/unzip")
+        
+        # make the library
+        os.system("ls ./contrib")
+        os.system("cd ./contrib/unzip/freetype; cmake -G \"Unix Makefiles\" .")
+        os.system("make -C ./contrib/unzip/freetype")
+        
+        # install the library
+        os.system("mkdir -p ./contrib/include/freetype")
+        os.system("cp ./contrib/unzip/freetype/libfreetype.a ./contrib/lib/libfreetype.a")
+        os.system("cp -R ./contrib/unzip/freetype/include/* ./contrib/include/freetype")
+        
+        # clean
+        os.system("rm -rf ./contrib/unzip/freetype")
+        
+    # building the LibJSON library
+    if library == lib_libjson or library == lib_all:
+        
+        # clean
+        os.system("rm -rf ./contrib/include/libjson")
+        os.system("rm -rf ./contrib/lib/libjson.a")
+        os.system("rm -rf ./contrib/unzip/libjson")
+            
+        # unzip
+        os.system("unzip ./contrib/zip/libjson.zip -d ./contrib/unzip")
+        
+        # make the library
+        os.system("ls ./contrib")
+        os.system("make -C ./contrib/unzip/libjson")
+        
+        # install the library
+        os.system("mkdir -p ./contrib/include/libjson")
+        os.system("mkdir -p ./contrib/include/libjson/_internal/Source")
+        os.system("mkdir -p ./contrib/include/libjson/_internal/Dependencies")        
+        os.system("cp ./contrib/unzip/libjson/libjson.a ./contrib/lib/libjson.a")
+        os.system("cp -R ./contrib/unzip/libjson/_internal/Source/* ./contrib/include/libjson/_internal/Source")
+        os.system("cp -R ./contrib/unzip/libjson/_internal/Dependencies/* ./contrib/include/libjson/_internal/Dependencies")
+        os.system("cp ./contrib/unzip/libjson/libjson.h ./contrib/include/libjson/libjson.h")
+        
+        # clean
+        os.system("rm -rf ./contrib/unzip/libjson")
+
+    # building the GLM library
+    if library == lib_glm or library == lib_all:
+        
+        # clean
+        os.system("rm -rf ./contrib/include/glm")
+            
+        # unzip
+        os.system("unzip ./contrib/zip/glm.zip -d ./contrib/include")
+
+    # clean
+    os.system("rm -rf ./contrib/unzip")
+
+		

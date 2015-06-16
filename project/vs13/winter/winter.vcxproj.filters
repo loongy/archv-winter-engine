@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{139fd58b-d54c-49d2-8bec-54c3add3fd46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\graphics">
+      <UniqueIdentifier>{5e3df1a7-70de-4780-a03a-48ff0dbb34df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\platform">
+      <UniqueIdentifier>{6df51f74-ade8-4c5e-9a2d-920d88c9fb94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\graphics\impl-opengl">
+      <UniqueIdentifier>{bb4d18f1-1ee6-4f08-a10f-594654855828}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\graphics\impl-opengl\impl-win32">
+      <UniqueIdentifier>{77caa9ac-9ecc-4a97-b107-ca0d97aab2b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\platform\impl-win32">
+      <UniqueIdentifier>{d6730f01-dd83-4539-90dc-3ccd1d16826e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene">
+      <UniqueIdentifier>{c625b052-63bc-44f0-ac69-98f47df0a86c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\ui">
+      <UniqueIdentifier>{37b79f03-5e42-42e3-a9f3-4eca89d926a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\geometry">
+      <UniqueIdentifier>{fc32d21a-694a-4a4c-8702-91579144304c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ai">
+      <UniqueIdentifier>{672f3583-b016-436d-8090-efb18ef2409f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scene\animation">
+      <UniqueIdentifier>{c82fd35b-b819-48e2-a5b0-755a918f3621}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\common\Collection.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\Color.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\Component.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\ComponentT.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\Direction.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\Entity.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\Manager.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\Size2D.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\Size3D.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\Transform.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\Transform2D.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\Transform3D.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\utility.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\AttributeArray.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\AttributeBuffer.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\BlendState.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\CommonGraphics.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\Depthbuffer.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\DepthStencilState.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\Font.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\FragmentShader.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\Framebuffer.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\GeometryShader.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\Program.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\RasterizerState.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\Renderbuffer.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\RenderContext.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\Sampler.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\Texture.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\TextureResource.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\Uniform.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\VertexShader.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglAttributeArray.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglAttributeBuffer.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglBlendState.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglDepthbuffer.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglDepthStencilState.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglFragmentShader.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglFramebuffer.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglGeometryShader.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglProgram.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglRasterizerState.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglRenderbuffer.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglRenderContext.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglSampler.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglTexture.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglTextureResource.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglUniform.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\openglVertexShader.cpp">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\graphics\impl-opengl\impl-win32\openglwin32RenderContext.cpp">
+      <Filter>Source Files\graphics\impl-opengl\impl-win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\platform\Application.cpp">
+      <Filter>Source Files\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\platform\Event.cpp">
+      <Filter>Source Files\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\platform\EventHandler.cpp">
+      <Filter>Source Files\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\platform\Window.cpp">
+      <Filter>Source Files\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\platform\impl-win32\win32Application.cpp">
+      <Filter>Source Files\platform\impl-win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\platform\impl-win32\win32Window.cpp">
+      <Filter>Source Files\platform\impl-win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\demo\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\Process.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\DynamicProcess.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\common\SceneProcess.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\AssetLoader.cpp">
+      <Filter>Source Files\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\RenderEffect.cpp">
+      <Filter>Source Files\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\Renderer.cpp">
+      <Filter>Source Files\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\RenderPass.cpp">
+      <Filter>Source Files\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\ui\Bitmap.cpp">
+      <Filter>Source Files\scene\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\ui\UIEventManager.cpp">
+      <Filter>Source Files\scene\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\ui\UIRenderer.cpp">
+      <Filter>Source Files\scene\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\DeferredRenderer.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\Material.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\Mesh.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\MeshCollection.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\MeshInstance.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\Perspective.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\Projection.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\ShadowMap.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\View.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\ui\TextField.cpp">
+      <Filter>Source Files\scene\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ai\NeuralNetwork.cpp">
+      <Filter>Source Files\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ai\NeuralLayer.cpp">
+      <Filter>Source Files\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\ui\UIBitmapPass.cpp">
+      <Filter>Source Files\scene\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\GInstancePass.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\GPass.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\GSPass.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\LCompositionEffect.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\LOrthoPass.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\LPointPass.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\LSOrthoEffect.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\geometry\LSPointEffect.cpp">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\animation\Animation.cpp">
+      <Filter>Source Files\scene\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\animation\Animator.cpp">
+      <Filter>Source Files\scene\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\scene\animation\TransformAnimation3D.cpp">
+      <Filter>Source Files\scene\animation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\common\Collection.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\Color.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\Common.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\Component.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\ComponentT.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\Direction.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\Entity.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\Manager.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\Size2D.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\Size3D.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\Transform.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\Transform2D.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\Transform3D.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\utility.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\AttributeArray.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\AttributeBuffer.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\BlendState.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\CommonGraphics.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\Depthbuffer.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\DepthStencilState.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\Font.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\FragmentShader.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\Framebuffer.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\GeometryShader.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\Graphics.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\Program.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\RasterizerState.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\Renderbuffer.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\RenderContext.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\Sampler.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\Texture.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\TextureResource.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\Uniform.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\VertexShader.h">
+      <Filter>Source Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglAttributeArray.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglAttributeBuffer.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglBlendState.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglDepthbuffer.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglDepthStencilState.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglFragmentShader.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglFramebuffer.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglGeometryShader.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglProgram.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglRasterizerState.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglRenderbuffer.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglRenderContext.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglSampler.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglTexture.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglTextureResource.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglUniform.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\openglVertexShader.h">
+      <Filter>Source Files\graphics\impl-opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\impl-win32\glext.h">
+      <Filter>Source Files\graphics\impl-opengl\impl-win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\graphics\impl-opengl\impl-win32\openglwin32RenderContext.h">
+      <Filter>Source Files\graphics\impl-opengl\impl-win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\platform\Application.h">
+      <Filter>Source Files\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\platform\Event.h">
+      <Filter>Source Files\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\platform\EventHandler.h">
+      <Filter>Source Files\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\platform\Platform.h">
+      <Filter>Source Files\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\platform\Window.h">
+      <Filter>Source Files\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\platform\impl-win32\win32Application.h">
+      <Filter>Source Files\platform\impl-win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\platform\impl-win32\win32Window.h">
+      <Filter>Source Files\platform\impl-win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\Process.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\DynamicProcess.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\common\SceneProcess.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\AssetLoader.h">
+      <Filter>Source Files\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\RenderEffect.h">
+      <Filter>Source Files\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\Renderer.h">
+      <Filter>Source Files\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\RenderPass.h">
+      <Filter>Source Files\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\ui\Bitmap.h">
+      <Filter>Source Files\scene\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\ui\UIEventManager.h">
+      <Filter>Source Files\scene\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\ui\UIRenderer.h">
+      <Filter>Source Files\scene\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\DeferredRenderer.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\Material.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\Mesh.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\MeshCollection.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\MeshInstance.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\Perspective.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\Projection.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\ShadowMap.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\Scene.h">
+      <Filter>Source Files\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\View.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\ui\TextField.h">
+      <Filter>Source Files\scene\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ai\NeuralNetwork.h">
+      <Filter>Source Files\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ai\AI.h">
+      <Filter>Source Files\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ai\NeuralLayer.h">
+      <Filter>Source Files\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\ui\UIBitmapPass.h">
+      <Filter>Source Files\scene\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\GInstancePass.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\GPass.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\GSPass.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\LCompositionEffect.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\LOrthoPass.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\LPointPass.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\LSOrthoEffect.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\geometry\LSPointEffect.h">
+      <Filter>Source Files\scene\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\animation\Animation.h">
+      <Filter>Source Files\scene\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\animation\Animator.h">
+      <Filter>Source Files\scene\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\scene\animation\TransformAnimation3D.h">
+      <Filter>Source Files\scene\animation</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
