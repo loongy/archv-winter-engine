@@ -1,5 +1,7 @@
 # README #
 
+THIS PROJECT IS NO LONGER BEING MAINTAINED.
+
 ### How do I get set up? ###
 
 See INSTALL.md
@@ -22,4 +24,4 @@ See INSTALL.md
 
 ### Who do I talk to? ###
 
-* Admin, Benjamin Wang, jianlong.ben@gmail.com
+* Admin, Benjamin Wang, benjamin.jl.wang@gmail.com
